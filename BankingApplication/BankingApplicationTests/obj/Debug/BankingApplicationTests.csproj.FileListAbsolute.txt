@@ -1,0 +1,10 @@
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\bin\Debug\BankingApplicationTests.dll
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\bin\Debug\BankingApplicationTests.pdb
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\bin\Debug\BankingApplication.exe
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\bin\Debug\BankingApplication.pdb
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\bin\Debug\BankingApplication.xml
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\obj\Debug\BankingApplicationTests.csprojResolveAssemblyReference.cache
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\obj\Debug\BankingApplicationTests.dll
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplicationTests\obj\Debug\BankingApplicationTests.pdb

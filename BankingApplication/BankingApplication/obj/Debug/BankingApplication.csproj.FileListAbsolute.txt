@@ -1,0 +1,11 @@
+c:\users\philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\bin\Debug\BankingApplication.exe.config
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\bin\Debug\BankingApplication.XML
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\bin\Debug\BankingApplication.exe
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\bin\Debug\BankingApplication.pdb
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\obj\Debug\BankingApplication.exe
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\obj\Debug\BankingApplication.pdb
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\obj\Debug\BankingApplication.rewritten
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\obj\Debug\Decl\BankingApplication.exe
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\obj\Debug\Decl\BankingApplication.pdb
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\obj\Debug\CodeContractAnalysisRun.log
+C:\Users\Philip\documents\visual studio 2015\Projects\BankingApplication\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache

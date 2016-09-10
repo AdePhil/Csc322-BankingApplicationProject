@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankingApplication</name>
+    </assembly>
+    <members>
+        <member name="T:BankingApplication.Account">
+            <summary>
+            An abstract account class. 
+            </summary>
+        </member>
+        <member name="F:BankingApplication.Account.balance">
+            <summary>
+            Account balance.
+            </summary>
+        </member>
+        <member name="P:BankingApplication.Account.Balance">
+            <summary>
+            A Balance property that can only be set from derived classes.
+            </summary>
+        </member>
+        <member name="P:BankingApplication.Account.AccountNumber">
+            <summary>
+            Returns the Account Number of the instance of the account.
+            </summary>
+        </member>
+        <member name="P:BankingApplication.Account.Name">
+            <summary>
+            Returns the name of the account owner.
+            </summary>
+        </member>
+        <member name="P:BankingApplication.Account.GetAccountType">
+            <summary>
+            An abstract property for getting the account type
+             which is to be implemented in the sub classs.
+            </summary>
+        </member>
+        <member name="M:BankingApplication.Account.#ctor(System.String,System.Decimal)">
+             <summary>
+            Creates an account using the name and initial deposit supplied.
+             </summary>
+             <param name="name">The name of the account owner.</param>
+             <param name="balance">The initial amount to be deposited to the  account.</param>
+        </member>
+        <member name="M:BankingApplication.Account.#ctor(System.String)">
+             <summary>
+            Creates an account using the name supplied.
+             </summary>
+             <param name="name">The name of the account owner.</param>
+        </member>
+        <member name="M:BankingApplication.Account.Withdraw(System.Decimal)">
+            <summary>
+             Withdraws an amount not less than 0 and is a mutiple of 50 from an account.
+            </summary>
+            <param name="amount">The amount to be withdrawn.</param>
+            <returns>A boolean signalling the success or failure of the withdraw method.</returns>
+        </member>
+        <member name="M:BankingApplication.Account.Deposit(System.Decimal)">
+            <summary>
+            Deposits an amount not less than 0 and is a multiple of 50 into the account.
+            </summary>
+            <param name="amount">The amount to be deposited into the account.</param>
+            <returns>Returns a boolean signalling the failure or success of the deposit method.</returns>
+        </member>
+        <member name="M:BankingApplication.Account.TransferTo(BankingApplication.Account,System.Decimal)">
+            <summary>
+            Transfers money from this account to the account specified.
+            (Account must not be an instance of it's self.)
+            </summary>
+            <param name="toAccount">Account to transfer to.</param>
+            <param name="amount">Amount to deposit.</param>
+            <returns>Returns a boolean signalling the failure or success of the transfer method.</returns>
+        </member>
+        <member name="M:BankingApplication.Account.canNotWithdraw(System.Decimal)">
+            <summary>
+            Checks if you can withdraw from the account.
+            </summary>
+            <param name="amount">amount to be withdrawn.</param>
+            <returns>Returns a boolean signalling the success or failure of the canNotWithdraw method.</returns>
+        </member>
+        <member name="M:BankingApplication.Account.generateAccountNumber">
+            <summary>
+            An abstarct method for generating the account number of a particular type of account. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BankingApplication.Account.ToString">
+            <summary>
+            Display's account's details.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BankingApplication.AccountDatabase">
+            <summary>
+            The account database.
+            </summary>
+        </member>
+        <member name="M:BankingApplication.AccountDatabase.GetInstance">
+            <summary>
+            Returns an instance of the AcountDatabase class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BankingApplication.AccountDatabase.AddAccount(BankingApplication.Account)">
+            <summary>
+            Adds an account to the account database.
+            </summary>
+            <param name="acc">Account to be added</param>
+        </member>
+        <member name="M:BankingApplication.AccountDatabase.GetAccount(System.String)">
+            <summary>
+            Returns the account with a unique accountNumber.
+            </summary>
+            <param name="accountNumber">Account number of tthe account.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BankingApplication.AccountDatabase.IsAccountInDb(System.String)">
+            <summary>
+            Checks if the account with specified account number is in the database.
+            </summary>
+            <param name="accountNumber"></param>
+            <returns>Returns a boolean signalling the success or failure of the IsAccountInDb method </returns>
+        </member>
+        <member name="M:BankingApplication.AccountDatabase.GetAccounts">
+            <summary>
+            Converts the Account database to an array and returns the array.
+            </summary>
+            <returns>Returns  an array of the accounts in the database.</returns>
+        </member>
+        <member name="M:BankingApplication.AccountDatabase.RemoveAccount(System.String)">
+            <summary>
+            Deletes an account from the database.
+            </summary>
+            <param name="accountNumber">Account number of the account to be deleted from the database.</param>
+        </member>
+        <member name="T:BankingApplication.CurrentAccount">
+            <summary>
+            A current account class.
+            </summary>
+        </member>
+        <member name="P:BankingApplication.CurrentAccount.MinimumBalance">
+            <summary>
+            Gets the  minimum balance of the current account class.
+            </summary>
+        </member>
+        <member name="P:BankingApplication.CurrentAccount.FixedCharge">
+             <summary>
+            Gets and sets the fixed charge.
+             </summary>
+        </member>
+        <member name="M:BankingApplication.CurrentAccount.#ctor(System.String,System.Decimal)">
+             <summary>
+            Creates an account using the name and initial deposit supplied.
+            Initial deposit must be greater than or equal to 1000.
+             </summary>
+             <param name="name">The name of the account owner.</param>
+             <param name="initialDeposit">The initial amount to be deposited into the account.</param>
+        </member>
+        <member name="P:BankingApplication.CurrentAccount.GetAccountType">
+            <summary>
+            Implemented abstract method which returns the account type.
+            </summary>
+        </member>
+        <member name="M:BankingApplication.CurrentAccount.Deposit(System.Decimal)">
+            <summary>
+            Deposits an amount not less than 0 and is a mutiple of 50 into an the account.
+            </summary>
+            <param name="amount">The amount to be deposited.</param>
+            <returns>Returns a boolean signalling the success or failure of the deposit operation.</returns>
+        </member>
+        <member name="M:BankingApplication.CurrentAccount.Withdraw(System.Decimal)">
+            <summary>
+            Withdraws an amount not less than the withdrawal limit and is a mutiple of 50 into an account.
+            It also withdraws the fixed charge on the current account.
+            </summary>
+            <param name="amount">The amount to be withdrawn.</param>
+            <returns>Returns a boolean signalling the success or failure of the withdraw operation.</returns>
+        </member>
+        <member name="M:BankingApplication.CurrentAccount.canNotWithdraw(System.Decimal)">
+            <summary>
+            Checks if money can be withdrawn from the account.
+            </summary>
+            <param name="amount">Amount to be withdrawn.</param>
+            <returns>Returns a boolean signalling if the money can be withderawn from the account.</returns>
+        </member>
+        <member name="M:BankingApplication.CurrentAccount.generateAccountNumber">
+            <summary>
+            Implemented abstract method which assigns an account number to each current account.
+            </summary>
+            <returns>Returns an account number.</returns>
+        </member>
+        <member name="M:BankingApplication.CurrentAccount.ToString">
+            <summary>
+             Displays an account's details.
+            </summary>
+            <returns>Returns a string representation of the savings account class.</returns>
+        </member>
+        <member name="T:BankingApplication.SavingsAccount">
+            <summary>
+            Savings Account Class.
+            </summary>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.#ctor(System.String)">
+             <summary>
+            Creates an account using the name supplied.
+             </summary>
+             <param name="name">The name of the account owner.</param>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.#ctor(System.String,System.Decimal)">
+            <summary>
+            Creates an account using the name and initial deposit supplied.
+            </summary>
+            <param name="name">The name of the account owner.</param>
+            <param name="initialDeposit">The initial amount deposited into the account.</param>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.#ctor(System.String,System.Decimal,System.Double)">
+            <summary>
+            Creates an account using the name, initial deposit and interest rate supplied.
+            </summary>
+            <param name="name">The name of the account owner.</param>
+            <param name="initialDeposit">The initial amount deposited into the savings account.</param>
+            <param name="interest">The interest rate for the savings account.</param>
+        </member>
+        <member name="P:BankingApplication.SavingsAccount.GetAccountType">
+            <summary>
+            Implemented abstract method which returns the account type.
+            </summary>
+        </member>
+        <member name="P:BankingApplication.SavingsAccount.InterestRate">
+            <summary>
+            Sets and returns the Annual Interest Rate.
+            </summary>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.Deposit(System.Decimal)">
+            <summary>
+            Deposits an amount not less than 0 and is a multiple of 50 into an account.
+            </summary>
+            <param name="amount">The amount to be deposited.</param>
+            <returns>Returns a boolean signalling the success or failure of the deposit operation.</returns>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.Withdraw(System.Decimal)">
+            <summary>
+            Withdraws an amount not less than 0 and is a mutiple of 50 from an account.
+            </summary>
+            <param name="amount">The amount to be withdrawn.</param>
+            <returns>Returns a boolean signalling the success or failure of the withdraw operation.</returns>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.canNotWithdraw(System.Decimal)">
+            <summary>
+            Checks if money can be withdrawn from the account.
+            </summary>
+            <param name="amount"></param>
+            <returns>Returns a boolean signalling if the money can be withderawn from the class.</returns>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.generateAccountNumber">
+            <summary>
+            Implemented abstract method which assigns an account number to each savings account.
+            </summary>
+            <returns>Returns an account number.</returns>
+        </member>
+        <member name="M:BankingApplication.SavingsAccount.ToString">
+            <summary>
+            Displays an account's details.
+            </summary>
+            <returns>The string representation of the savings account class.</returns>
+        </member>
+    </members>
+</doc>
